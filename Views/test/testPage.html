@@ -1,0 +1,25 @@
+<style>
+    div#TestPageContainer {
+        height: 300px;
+        width: 300px;
+        background-color: #F0F0F0;
+    }
+</style>
+<script src="../../Scripts/hxsfx/test/test.js"></script>
+<script>
+    function updateBackgroundColor() {
+        try {
+            var backgroundColor = '#' + (Math.floor(Math.random() * 0xffffff).toString(16).padStart(6, '0'));
+            document.getElementById("TestPageContainer").style.backgroundColor = backgroundColor;
+        }
+        catch (ex) {
+            console.log(ex.message);
+        }
+    }
+</script>
+
+<div id="TestPageContainer">
+    <button onclick="updateBackgroundColor()">更改背景色</button>
+    <button onclick="modifyPFontColor()">更改下面一句话的字体颜色</button>
+    <p id="P">这儿是一句话。</p>
+</div>

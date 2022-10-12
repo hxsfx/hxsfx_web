@@ -1,30 +1,16 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <meta http-equiv=Content-Type content="text/html; charset=utf-8" />
     <title>js库测试</title>
-    <link href="Content/index.css" rel="stylesheet" />
-    <script src="hxsfx/ajax.js"></script>
-    d
+    <script src="Scripts/hxsfx/hxsfx.js"></script>
+    <script src="Scripts/hxsfx/ajax.js"></script>
     <script>
         window.onload = function () {
-            window.hxsfx.ajax.get();
+            window.hxsfx.ajax.loadHTML(document.getElementById("ContentContainer"), "Views/test/testPage.html");
         };
-
     </script>
-    <script>
-        
-    </script>
-    <!--
-
-    <script(.|\n)*?>(.|\r|\n|\r\n)*?<\/script>
-        (?<=)(?<=)
-        /<script(.|\n)*?>(.|\n|\r\n)*?<\/script>/ig;
-        -->
 </head>
 <body>
-    <div id="content">
-
-    </div>
+    <div id="ContentContainer"></div>
 </body>
 </html>
